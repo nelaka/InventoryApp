@@ -246,7 +246,7 @@ public class BookProvider extends ContentProvider {
 
         // Insert the new book with the given values
         long id = database.insert(BookEntry.TABLE_NAME, null, values);
-        Log.v("NELA ID ", String.valueOf(id));
+
         // If the ID is -1, then the insertion failed. Log an error and return null.
         if (id == -1) {
             Log.e(LOG_TAG, "Failed to insert row for " + uri);
