@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Bookstore Inventory Tracker</string>
+    <string name="empty_view_title_text">The bookstore is closed as there are no books!</string>
+    <string name="empty_view_subtitle_text">Please add some by pressing the button with the book or from the menu, insert the default books in the database</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="editor_activity_title_new_book">Add a book</string>
+    <string name="editor_activity_title_edit_book">Edit book</string>
+    <string name="book_title">Book Title</string>
+    <string name="book_author">Author</string>
+    <string name="delete_button">Delete the book</string>
+    <!-- Label for gender information in the editor [CHAR LIMIT=30] -->
+    <string name="category_type">type</string>
+    <!-- Label for dropdown menu option if the book's gender is unknown [CHAR LIMIT=20] -->
+    <string name="type_unknown">Unknown</string>
+
+    <!-- Label for dropdown menu option if the book is male [CHAR LIMIT=20] -->
+    <string name="type_novel">Novel</string>
+
+    <!-- Label for dropdown menu option if the book is female [CHAR LIMIT=20] -->
+    <string name="type_technical">Technical</string>
+
+    <string name="action_save">save</string>
+    <string name="action_delete">delete</string>
+
+
+    <!-- Toast message in editor when new book has been successfully inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_book_successful">Book saved</string>
+
+    <!-- Toast message in editor when new book has failed to be inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_book_failed">Error with saving book</string>
+
+    <!-- Toast message in editor when current book was successfully updated [CHAR LIMIT=NONE] -->
+    <string name="editor_update_book_successful">Book updated</string>
+
+    <!-- Toast message in editor when current book has failed to be updated [CHAR LIMIT=NONE] -->
+    <string name="editor_update_book_failed">Error with updating book</string>
+
+    <!-- Dialog message when user is leaving editor but hasn't saved changes [CHAR LIMIT=NONE] -->
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+
+    <!-- Dialog button text for the option to discard a user's changes [CHAR LIMIT=20] -->
+    <string name="discard">Discard</string>
+
+    <!-- Dialog button text for the option to keep editing the current book [CHAR LIMIT=20] -->
+    <string name="keep_editing">Keep Editing</string>
+
+    <!-- Toast message in editor when current book was successfully deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_book_successful">Book deleted</string>
+
+    <!-- Toast message in editor when current book has failed to be deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_book_failed">Error with deleting book</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the current book [CHAR LIMIT=NONE] -->
+    <string name="delete_dialog_msg">Delete this book?</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the current book [CHAR LIMIT=NONE] -->
+    <string name="delete_all_dialog_msg">Are you sure you want to delete everything?</string>
+
+    <!-- Dialog button text for the option to confirm deleting the current book [CHAR LIMIT=20] -->
+    <string name="delete">Delete</string>
+
+    <!-- Dialog button text for the option to cancel deletion of the current book [CHAR LIMIT=20] -->
+    <string name="cancel">Cancel</string>
+
+    <string name="book_title_hint">Book Title</string>
+    <string name="author_hint">Author</string>
+    <string name="price_hint">price in euro</string>
+    <string name="supplier_hint">Supplier</string>
+    <string name="action_insert_data">Insert default products</string>
+    <string name="action_delete_all_entries">Delete All</string>
+    <string name="negative_quantity_error">The quantity is already zero.</string>
+    <string name="no_title_error">Can\'t save as every book needs a title!</string>
+    <string name="no_price_error">Can\'t save as every book needs a valid price!</string>
+    <string name="no_email_error">Can\'t save as every book needs a supplier\'s email to be able to order more!</string>
+
+</resources>
