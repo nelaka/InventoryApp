@@ -259,7 +259,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             public void onClick(View view) {
 
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("mailto:" +  mSupplierEmailEditText.getText().toString().trim())); // only email apps should handle this
+                intent.setData(Uri.parse("mailto:" + mSupplierEmailEditText.getText().toString().trim())); // only email apps should handle this
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Order more from book: " + mTitleEditText.getText().toString().trim());
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
@@ -298,9 +298,10 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         String supplierPhoneString = mSupplierPhoneEditText.getText().toString().trim();
         String supplierEmailString = mSupplierEmailEditText.getText().toString().trim();
 
+
         // Check if this is supposed to be a new book
         // and check if all the fields in the editor are blank
-        if (mCurrentBookUri == null &&
+        if (mCurrentBookUri == null && mImageUri == null &&
                 TextUtils.isEmpty(titleString) && TextUtils.isEmpty(authorString) &&
                 mType == BookEntry.TYPE_UNKNOWN && TextUtils.isEmpty(priceString) &&
                 TextUtils.isEmpty(quantityString) && TextUtils.isEmpty(supplierString) &&
@@ -320,6 +321,9 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             Toast.makeText(this, R.string.no_email_error,
                     Toast.LENGTH_SHORT).show();
             return false;
+        } else if (mImageUri == null) {
+            Toast.makeText(this, R.string.no_image_error,
+                    Toast.LENGTH_SHORT).show();
         }
 
         // Create a ContentValues object where column names are the keys,
@@ -363,6 +367,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
                 // Otherwise, the insertion was successful and we can display a toast.
                 Toast.makeText(this, getString(R.string.editor_insert_book_successful),
                         Toast.LENGTH_SHORT).show();
+
             }
         } else {
             // Otherwise this is an EXISTING book, so update the book with content URI: mCurrentBookUri
@@ -381,8 +386,10 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
                 // Otherwise, the update was successful and we can display a toast.
                 Toast.makeText(this, getString(R.string.editor_update_book_successful),
                         Toast.LENGTH_SHORT).show();
+
             }
         }
+
         return true;
     }
 
@@ -459,6 +466,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
                 // Exit activity
                 finish();
                 return true;
+
             // Respond to a click on the "Delete" menu option
             case R.id.action_delete:
                 // Pop up confirmation dialog for deletion

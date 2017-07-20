@@ -73,5 +73,6 @@
     <string name="no_title_error">Can\'t save as every book needs a title!</string>
     <string name="no_price_error">Can\'t save as every book needs a valid price!</string>
     <string name="no_email_error">Can\'t save as every book needs a supplier\'s email to be able to order more!</string>
+    <string name="no_image_error">Default image will be placed as every book needs an image</string>
 
 </resources>
