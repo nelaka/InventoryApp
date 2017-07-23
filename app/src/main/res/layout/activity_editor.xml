@@ -9,69 +9,76 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/edit_book_image"
             android:layout_width="@dimen/image_width"
             android:layout_height="@dimen/image_width"
-            android:src="@drawable/bookstore"
-            />
+            android:contentDescription="@string/no_image_photo"
+            android:src="@drawable/no_image" />
+
         <EditText
             android:id="@+id/edit_book_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/edit_book_image"
-            android:inputType="textCapWords"
-            android:hint="@string/book_title_hint"/>
+            android:hint="@string/book_title_hint"
+            android:inputType="textCapWords" />
+
         <EditText
             android:id="@+id/edit_book_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textCapWords"
-            android:layout_toRightOf="@id/edit_book_image"
             android:layout_below="@id/edit_book_title"
-            android:hint="@string/author_hint"/>
+            android:layout_toRightOf="@id/edit_book_image"
+            android:hint="@string/author_hint"
+            android:inputType="textCapWords" />
+
         <Spinner
             android:id="@+id/spinner_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/edit_book_image"
             android:layout_below="@id/edit_book_author"
-            android:spinnerMode="dropdown"
-
-            />
+            android:layout_toRightOf="@id/edit_book_image"
+            android:spinnerMode="dropdown" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Price: "/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit_book_price"
-        android:hint="0"
-        android:inputType="number"
-        android:layout_marginBottom="16dp"/>
+            android:text="@string/price_title" />
+
+        <EditText
+            android:id="@+id/edit_book_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/zero_price"
+            android:inputType="number" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="€"/>
+            android:text="@string/euro_symbol" />
     </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Available: "
-        android:textAppearance="?android:textAppearanceMedium"/>
+        android:text="@string/available"
+        android:textAppearance="?android:textAppearanceMedium" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/button_minus"
             android:layout_width="48dp"
@@ -82,71 +89,72 @@
             android:id="@+id/edit_book_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:inputType="number"
-            tools:text="1"
-            android:textAppearance="?android:textAppearanceMedium"/>
+            android:textAppearance="?android:textAppearanceMedium"
+            tools:text="1" />
 
         <Button
             android:id="@+id/button_plus"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:text="@string/plus" />
-
     </LinearLayout>
+
     <EditText
         android:id="@+id/edit_supplier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textCapWords"
-        android:hint="@string/supplier_hint"/>
+        android:hint="@string/supplier_hint"
+        android:inputType="textCapWords" />
+
     <EditText
         android:id="@+id/edit_supplier_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:hint="+30 0000 000000"/>
+        android:hint="@string/telephone_hint"
+        android:inputType="phone" />
+
     <EditText
         android:id="@+id/edit_supplier_email"
-        android:inputType="textEmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="supplier@something.com"
         android:layout_marginBottom="16dp"
-        />
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress" />
 
     <TextView
         android:id="@+id/order_now_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Order now!"/>
+        android:text="@string/order_now"
+        android:textAppearance="?android:textAppearanceMedium" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-
         <ImageButton
             android:id="@+id/button_telephone"
             android:layout_width="36dp"
             android:layout_height="36dp"
+            android:contentDescription="@string/telephone_image_decc"
             android:src="@drawable/ic_call_white_24dp" />
 
         <ImageButton
             android:id="@+id/button_email"
             android:layout_width="36dp"
             android:layout_height="36dp"
+            android:contentDescription="@string/email_image_desc"
             android:src="@drawable/ic_email_white_24dp" />
-
-
     </LinearLayout>
+
     <Button
         android:id="@+id/button_delete"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/delete_button"/>
+        android:text="@string/delete_button" />
 
 </LinearLayout>

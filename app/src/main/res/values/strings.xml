@@ -73,6 +73,18 @@
     <string name="no_title_error">Can\'t save as every book needs a title!</string>
     <string name="no_price_error">Can\'t save as every book needs a valid price!</string>
     <string name="no_email_error">Can\'t save as every book needs a supplier\'s email to be able to order more!</string>
-    <string name="no_image_error">Default image will be placed as every book needs an image</string>
+    <string name="no_image_error">Can\'t save as every book needs an image</string>
+    <string name="telephone_hint">+30 0000 000000</string>
+    <string name="email_hint">supplier@something.com</string>
+    <string name="order_now">Order now!</string>
+    <string name="empty_bookstore_image">Empty bookstore image</string>
+    <string name="euro_symbol">€</string>
+    <string name="zero_price">0</string>
+    <string name="price_title">Price:</string>
+    <string name="available">Available:</string>
+    <string name="no_image_photo">No image photo</string>
+    <string name="email_image_desc">email image</string>
+    <string name="telephone_image_decc">telephone image</string>
+    <string name="buy_button_text">Buy</string>
 
 </resources>

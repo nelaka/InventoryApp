@@ -45,6 +45,7 @@ import butterknife.ButterKnife;
 
 import static java.lang.Integer.parseInt;
 
+
 /**
  * Allows user to add a new book to the store or edit an existing one.
  */
@@ -313,7 +314,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             Toast.makeText(this, R.string.no_title_error,
                     Toast.LENGTH_SHORT).show();
             return false;
-        } else if (TextUtils.isEmpty(priceString) || Integer.parseInt(priceString) <= 0) {
+        } else if (TextUtils.isEmpty(priceString) || parseInt(priceString) <= 0) {
             Toast.makeText(this, R.string.no_price_error,
                     Toast.LENGTH_SHORT).show();
             return false;
@@ -324,6 +325,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         } else if (mImageUri == null) {
             Toast.makeText(this, R.string.no_image_error,
                     Toast.LENGTH_SHORT).show();
+            return false;
         }
 
         // Create a ContentValues object where column names are the keys,
@@ -461,12 +463,9 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         switch (item.getItemId()) {
             // Respond to a click on the "Save" menu option
             case R.id.action_save:
-                // Save book to database
-                saveBook();
-                // Exit activity
-                finish();
+                // Save book to database and exit activity - only if the required fields are filled
+                if (saveBook()) finish();
                 return true;
-
             // Respond to a click on the "Delete" menu option
             case R.id.action_delete:
                 // Pop up confirmation dialog for deletion

@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
     tools:context=".CatalogActivity">
 
     <ImageView
@@ -12,33 +12,38 @@
         android:layout_width="@dimen/image_width"
         android:layout_height="@dimen/image_width"
         android:src="@drawable/bookstore"/>
+
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_weight="1"
         android:layout_height="@dimen/image_width"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
         android:orientation="vertical"
-        android:layout_gravity="center_vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/title"
-            tools:text="Book Title"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/price"
-            tools:text="Price: 20€"/>
+        android:padding="@dimen/padding_default">
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            tools:text="Book Title" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Price: 20€" />
+
+        <TextView
             android:id="@+id/quantity"
-            tools:text="Remaining: 3"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Remaining: 3" />
     </LinearLayout>
+
     <Button
         android:id="@+id/button_sale"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/image_width"
-        android:text="Buy"/>
-
+        android:text="@string/buy_button_text"
+        android:textColor="@color/colorAccent" />
 </LinearLayout>
